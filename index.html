@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookEase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            background-color: #6a1b9a;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .language-selector {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .language-selector select {
+            padding: 5px;
+            font-size: 1em;
+        }
+
+        .auth-buttons {
+            position: absolute;
+            top: 20px;
+            right: 120px;
+        }
+
+        .auth-buttons a {
+            color: white;
+            background-color: #6a1b9a;
+            padding: 10px 15px;
+            margin-left: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .auth-buttons a:hover {
+            background-color: #4a148c;
+        }
+
+        .search-bar {
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .search-bar input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            font-size: 1em;
+            border: 2px solid #6a1b9a;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: white;
+            background-color: #6a1b9a;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #4a148c;
+        }
+
+        .hero-section {
+            background: url('images/cameroon-landscape.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .hero-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3em;
+            margin: 0;
+            color: #FFD700;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-section p {
+            font-size: 1.2em;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .breadcrumb {
+            background-color: #6a1b9a;
+            color: white;
+            padding: 10px;
+            margin: 20px 0;
+        }
+
+        .breadcrumb a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 40px;
+            background-color: #fff;
+            margin: 0 10px;
+        }
+
+        .service-group {
+            flex: 1 1 calc(50% - 20px);
+            margin: 10px;
+            padding: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .service-group h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #6a1b9a;
+            font-size: 1.8em;
+            margin-top: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-details select,
+        .service-details input {
+            padding: 10px;
+            font-size: 1em;
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .footer {
+            background-color: #6a1b9a;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .service-group img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>BookEase</h1>
+        <div class="language-selector">
+            <select aria-label="Sélectionner la langue">
+                <option value="fr">Français</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+        <div class="auth-buttons">
+            <a href="#" class="login-button">Se connecter</a>
+            <a href="#" class="signup-button">Créer un compte</a>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <h2>Explorez le Cameroun avec BookEase</h2>
+        <p>Réservez, louez ou abonnez-vous facilement à nos services</p>
+    </section>
+
+    <section class="breadcrumb">
+        <a href="#">Accueil</a> > 
+        <a href="#">Services</a> > 
+        <a href="#">Lieux et Créneaux</a>
+    </section>
+
+    <section class="search-bar">
+        <input type="text" placeholder="Rechercher..." aria-label="Champ de recherche">
+        <button type="button">Chercher</button>
+    </section>
+
+    <section class="services">
+        <!-- Transport et Mobilité -->
+        <article class="service-group">
+            <h2><i class="fas fa-car service-icon"></i> Transport et Mobilité</h2>
+            <div class="service-details">
+                <label for="transport-options">Sélectionner un service :</label>
+                <select id="transport-options">
+                    <option value="hertz-avis">Location de voitures - Hertz, Avis</option>
+                    <option value="blablacar">Covoiturage - BlaBlaCar</option>
+                    <option value="yango">Location de taxi - Yango</option>
+                    <option value="finexs-buca">Réservation de sièges - Finexs, Buca Voyage</option>
+                </select>
+                <label for="transport-city">Choisir une ville :</label>
+                <select id="transport-city">
+                    <option value="douala">Douala</option>
+                    <option value="yaounde">Yaoundé</option>
+                    <option value="buea">Buea</option>
+                    <option value="limbe">Limbe</option>
+                    <option value="garoua">Garoua</option>
+                    <option value="maroua">Maroua</option>
+                </select>
+                <label for="transport-dates">Sélectionner des dates :</label>
+                <input type="date" id="transport-dates" name="dates">
+                <img src="images/transport.jpg" alt="Transport et Mobilité">
+            </div>
+        </article>
+
+        <!-- Hébergement -->
+        <article class="service-group">
+            <h2><i class="fas fa-bed service-icon"></i> Hébergement</h2>
+            <div class="service-details">
+                <label for="hebergement-options">Sélectionner un service :</label>
+                <select id="hebergement-options">
+                    <option value="hilton-ibis">Réservation de chambres d'hôtel - Hilton, Ibis</option>
+                    <option value="airbnb-booking">Maisons d'hôtes - Airbnb, Booking.com</option>
+                </select>
+                <label for="hebergement-city">Choisir une ville :</label>
+                <select id="hebergement-city">
+                    <option value="douala">Douala</option>
+                    <option value="yaounde">Yaoundé</option>
+                    <option value="bue
+
+a">Buea</option>
+                    <option value="limbe">Limbe</option>
+                    <option value="garoua">Garoua</option>
+                    <option value="maroua">Maroua</option>
+                </select>
+                <label for="hebergement-dates">Sélectionner des dates :</label>
+                <input type="date" id="hebergement-dates" name="dates">
+                <img src="images/hebergement.jpg" alt="Hébergement">
+            </div>
+        </article>
+
+        <!-- Loisirs et Divertissement -->
+        <article class="service-group">
+            <h2><i class="fas fa-theater-masks service-icon"></i> Loisirs et Divertissement</h2>
+            <div class="service-details">
+                <label for="loisirs-options">Sélectionner un service :</label>
+                <select id="loisirs-options">
+                    <option value="cinemas-theaters">Cinémas et Théâtres</option>
+                    <option value="sports-events">Événements sportifs</option>
+                    <option value="tours-excursions">Visites guidées et excursions</option>
+                </select>
+                <label for="loisirs-city">Choisir une ville :</label>
+                <select id="loisirs-city">
+                    <option value="douala">Douala</option>
+                    <option value="yaounde">Yaoundé</option>
+                    <option value="buea">Buea</option>
+                    <option value="limbe">Limbe</option>
+                    <option value="garoua">Garoua</option>
+                    <option value="maroua">Maroua</option>
+                </select>
+                <label for="loisirs-dates">Sélectionner des dates :</label>
+                <input type="date" id="loisirs-dates" name="dates">
+                <img src="images/loisirs.jpg" alt="Loisirs et Divertissement">
+            </div>
+        </article>
+
+        <!-- Réparation et Entretien -->
+        <article class="service-group">
+            <h2><i class="fas fa-tools service-icon"></i> Réparation et Entretien</h2>
+            <div class="service-details">
+                <label for="reparation-options">Sélectionner un service :</label>
+                <select id="reparation-options">
+                    <option value="vehicle-repairs">Réparation de véhicules</option>
+                    <option value="home-maintenance">Entretien à domicile</option>
+                    <option value="electronic-repairs">Réparation d'électronique</option>
+                </select>
+                <label for="reparation-city">Choisir une ville :</label>
+                <select id="reparation-city">
+                    <option value="douala">Douala</option>
+                    <option value="yaounde">Yaoundé</option>
+                    <option value="buea">Buea</option>
+                    <option value="limbe">Limbe</option>
+                    <option value="garoua">Garoua</option>
+                    <option value="maroua">Maroua</option>
+                </select>
+                <label for="reparation-dates">Sélectionner des dates :</label>
+                <input type="date" id="reparation-dates" name="dates">
+                <img src="images/reparation.jpg" alt="Réparation et Entretien">
+            </div>
+        </article>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 BookEase. Tous droits réservés.</p>
+        <p><a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a></p>
+    </footer>
+</body>
+
+</html>
